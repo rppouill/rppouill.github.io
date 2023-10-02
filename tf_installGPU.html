@@ -1,14 +1,33 @@
+<!DOCTYPE html>
 <html>
+    <head>
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/default.min.css">
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+    </head>
     <body>
-        <h3 id="tensorflow-installation">Tensorflow Installation</h3>
-        <p>You&#39;ll need a recent version of <code>pip</code> to install Tensorflow:</p>
-        <pre><code class="lang-bash">pip <span class="hljs-keyword">install</span> <span class="hljs-comment">--upgrade pip</span>
-        </code></pre>
-        <p>Next, install Tensorflow with <code>pip</code>(obviously):</p>
-<pre><code class="lang-bash"><span class="hljs-comment"># GPU
-</span>pip <span class="hljs-keyword">install</span> tensorflow[<span class="hljs-keyword">and</span>-cuda]
-<span class="hljs-comment"># CPU</span>
-pip <span class="hljs-keyword">install</span> tensorflow
-</code></pre>
+        <h1>Hello World</h1>
+        <h2>Tensorflow Installation</h2>
+        <p>You'll need a recent version of <code>pip</code> to install Tensorflow:</p>
+
+        <pre> 
+            <code class="Bash">
+            pip install --upgrade pip 
+            </code>
+        </pre>
+        <p>Next, install Tensorflow with <code>pip</code> (obviously):</p>
+
+        <pre> 
+            <code class="Python">
+                #GPU
+                pip install tensorflow[and-cuda]
+            </code>
+        </pre>
+        <pre>
+            <code class="Python">
+                # CPU
+                pip install tensorflow
+            </code>
+        </pre>
     </body>
 </html>

@@ -1,5 +1,47 @@
 <html>
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/hover_menu.css">
+        <script src="js/clock.js"></script>
+    </head>
     <body>
-        <a href="tf_installGPU.html">Tensorflow GPU install</a>
+        <ul>
+            <li><a href="#">
+               About</a></li>
+            <li><a href="tf_installGPU.html">
+               Tensorflow CUDA</a></li>
+            <li><a href="#">
+               Blog</a></li>
+            <li><a href="#">
+               Contact</a></li>
+        </ul>
+        <div class = "clock">
+            <p id="date"></p>
+            <p id="time"></p>
+        </div>
+        <script>
+            const WEEK = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+            function updateTime() {
+                var now = new Date();
+                document.getElementById("time").innerText = 
+                    zeroPadding(now.getHours(), 2) + ":" +
+                    zeroPadding(now.getMinutes(), 2) + ":" +
+                    zeroPadding(now.getSeconds(), 2);
+                document.getElementById("date").innerText =
+                    now.getFullYear() + "-" +
+                    zeroPadding(now.getMonth() + 1, 2) + "-" +
+                    zeroPadding(now.getDate(), 2) + " " +
+                    WEEK[now.getDay()];
+            }
+
+            updateTime();
+            setInterval(updateTime, 1000);
+
+            function zeroPadding(num, digit) { 
+                return String(num).padStart(digit, '0');
+            }
+        </script>
     </body>
 </html>

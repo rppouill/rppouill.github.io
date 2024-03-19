@@ -17,5 +17,7 @@ Compile gattlib
 Go dbus and copy libgatllib*.so into you python library folder
 Copy gattlib-py/gattlib into same folder
 
+Oh and you need install gi
+
 (a faire plus beaucoup mieux)
 
